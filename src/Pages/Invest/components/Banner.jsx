@@ -1,10 +1,10 @@
 import React from "react";
-import SectionIntro from "../../../components/reusable/SectionIntro";
+import SectionIntro from "../../../Components/reusable/SectionIntro";
 import stateImg from "/assets/invest/state.png";
 import percantageImg from "/assets/invest/percentage.png";
 import { Banknote } from "lucide-react";
 import InvestmentModal from "../../../Components/reusable/InvestmentModal";
-import InvestNowBtn from "../../../components/reusable/InvestNowBtn";
+import InvestNowBtn from "../../../Components/reusable/InvestNowBtn";
 
 const Banner = () => {
 	return (
