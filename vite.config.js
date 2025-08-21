@@ -1,0 +1,20 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Preserve original image names and put them in assets/
+          if (/\.(png|jpe?g|gif|svg|webp)$/.test(assetInfo.name ?? "")) {
+            return "assets/[name][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
+  },
+});

@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Sentient Variable";
+	src: url("/fonts/Sentient-Variable.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Switzer";
+	src: url("/fonts/Switzer-Variable.ttf") format("truetype");
+}
+
+.font-sentient {
+	font-family: "Sentient Variable", sans-serif;
+}
+
+.font-switzer {
+	font-family: "Switzer", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+	font-family: "Sentient Variable", sans-serif;
+}
+
+p,
+a,
+button,
+input,
+textarea {
+	font-family: "Switzer", serif;
+}
+
+.text-primary {
+	@apply text-[#FFD4B2];
+}
+
+.text-secondary {
+	@apply text-[#142929];
+}
+
+.bg-primary {
+	@apply bg-[#FFD4B2];
+}
+
+.bg-secondary {
+	@apply bg-[#142929];
+}
+
+@media (max-width: 640px) {
+	.clip-diagonal-sm {
+		clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+	}
+
+	.clip-bottom-diagonal-sm {
+		clip-path: polygon(0 0, 100% 0, 100% 99%, 0% 100%);
+	}
+}
+
+.clip-diagonal {
+	clip-path: polygon(0 8%, 100% 0, 100% 92%, 0% 100%);
+}
+
+.clip-bottom-diagonal {
+	clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
+}
+
+.clip-bottom-diagonal-architecture {
+	clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+}
+
+.clip-top-diagonal {
+	clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.amenities-stroke {
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+}
+
+.amenities-stroke-dark {
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.08);
+}
+
+.amenities-stroke-yellow {
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(234, 179, 8, 0.3);
+}
+/* This is the real magic */
+.mask-gradient {
+	-webkit-mask-image: linear-gradient(to top, transparent 0%, white 30%, white 100%);
+	mask-image: linear-gradient(to top, transparent 0%, white 30%, white 100%);
+}
+
+.benzene-button {
+	clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.benzene-button:hover {
+	transform: scale(1.05);
+}
+
+.mySwiper {
+	width: 100%;
+	height: 350px;
+}
+
+@keyframes fillLine {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.filler-animation {
+	animation: fillLine 3s linear forwards;
+}
+
+@keyframes slide-fill {
+	from {
+		height: 0%;
+	}
+	to {
+		height: 100%;
+	}
+}
+
+.animate-slide-fill {
+	animation: slide-fill 3s linear forwards;
+}
+
+/* Tailwind CSS: add this to your global.css or inside Tailwind config */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* website scroll bar customization start */
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f6f1ed;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #98643e; /* thumb color */
+	border-radius: 6px; /* rounded corners */
+	border: 2px solid #f6f1ed; /* space between thumb and track */
+}
+
+/* For Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #98643e #f6f1ed;
+}
+/* website scroll bar customization ends */
+
+@keyframes blink-border {
+	0%,
+	100% {
+		border-color: #98643e;
+	}
+	50% {
+		border-color: #ffd4b2;
+	}
+}
+.blink-border {
+	animation: blink-border 1.5s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
