@@ -20,7 +20,7 @@ const MainLayout = () => {
 				{/* Floating Buttons Bar */}
 				<div>
 					{/* Call Button */}
-					<div className="fixed bottom-12 lg:left-20 left-10 z-50">
+					<div className="fixed bottom-12 lg:left-20 left-10 z-40">
 						<a href="tel:+8801-938886333" className="ml-[2%] md:ml-[4%]">
 							<div className="w-14 h-14 flex items-center justify-center bg-[#FFD4B2] rounded-full shadow-lg cursor-pointer border-8 border-[#98643E] hover:bg-[#F6F1ED] transition-colors duration-300 blink-border">
 								<Phone size={20} className="text-[#98643E]" />
@@ -29,7 +29,7 @@ const MainLayout = () => {
 					</div>
 
 					{/* Chat Section */}
-					<div className="fixed bottom-12 lg:right-20 right-10 z-50">
+					<div className="fixed bottom-12 lg:right-20 right-10 z-40">
 						<div className="relative flex flex-col items-center gap-2">
 							{/* Extra buttons wrapper */}
 							<div
